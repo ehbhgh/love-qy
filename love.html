@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I love Qy</title>
+    <meta name="keywords" content="i love qinying" />
+    <link
+      rel="shortcut icon"
+      href="./static//favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <div class="van-cell van-field love_you">
+      <div class="van-cell__title van-field__label" style="text-align: center">
+        <label id="confirm" for="van-field-1-input" title="点击播放音乐">I Love Qy</label>
+      </div>
+    </div>
+    <!-- 流星雨 -->
+    <div class="box" style="opacity: 0">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- 背景音乐 -->
+    <audio
+      src="./static//index.mp3"
+      autoplay="autoplay"
+      loop="loop"
+      controls="controls"
+      id="vedio"
+    ></audio>
+    <canvas id="lovexf"></canvas>
+    <script src="script.js"></script>
+    <script src="./love.click.js"></script>
+  </body>
+  <script>
+    let confirm = document.getElementById("confirm");
+
+    confirm.onclick = function () {
+      let mp3 = document.getElementById("vedio");
+      mp3.play();
+    };
+    setTimeout(() => {
+      document.querySelector(".box").style.opacity = 1;
+    }, 2000);
+  </script>
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c86d6693de25dbc83f5b35458e469aa0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <style>
+    #vedio {
+      display: none;
+    }
+    #confirm {
+      cursor: pointer;
+    }
+  </style>
+</html>
