@@ -4,7 +4,7 @@
 }
 
 body {
-    background: url('../static/bg.webp') no-repeat center center;
+    background: url('./bg.webp') no-repeat center center;
     background-size: cover;
     height: 100vh;
 }
